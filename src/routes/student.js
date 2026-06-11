@@ -30,7 +30,7 @@ studentRoute.post("/",async (req,res) => {
     } catch (error) {
         console.log(error.errorResponse)
         logger.error(`infor::Failed to save student record into database-reasons::${JSON.stringify(error.errorResponse)} time::${new Date().toISOString()}`)
-        return res.status(404).json({success : false, message : "Failed to save student record into database"})
+        return res.status(404).json({success : false, message : "Failed to save student record into database",error})
     }
 
     return res.status(201).json({success : true, message : "process successful"})
