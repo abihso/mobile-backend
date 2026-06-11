@@ -24,6 +24,7 @@ studentRoute.post("/",async (req,res) => {
                 date : req.body.date,
                 classInfor : req.body.classInfor,
                 password : await hassPassword(req.body.password),
+                gender : req.body.gender
             }
             )
             await createStudent.save()
