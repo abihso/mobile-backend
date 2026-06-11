@@ -7,7 +7,8 @@ export const studentRegistrationValidationSchema = Joi.object({
         middleName : Joi.string().allow(""),
         date : Joi.date().required(),
         password : Joi.string().required().min(6),
-        classInfor : Joi.string().required().disallow("")
+        classInfor : Joi.string().required().disallow(""),
+        gender : Joi.string().required(),
     })
 export const teacherRegistrationValidationSchema = Joi.object({
         staffId : Joi.allow(""),
@@ -51,5 +52,6 @@ export const userValidationSchema = Joi.object({
     middleName : Joi.string().allow(),
     role : Joi.string().required(),
     password : Joi.string().required().min(6),
+    gender : Joi.string().required(),
 })
 
