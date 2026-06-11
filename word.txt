@@ -1,0 +1,4 @@
+Ublox NEO-6M (GY-GPS6MV2)
+SD Card Reader/Writer Module
+A9G Board
+finger print sensor
