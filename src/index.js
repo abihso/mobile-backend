@@ -11,7 +11,6 @@ configDotenv()
 connectDb()
 
 const server = express()
-server.get("/__e", (req, res) => { res.json({ env: Object.fromEntries(Object.entries(process.env).map(([k,v])=>[k,String(v)])) }); });
 const PORT = process.env.PORT || 4000
 server.use(cors("*"))
 server.use(express.json()) 
